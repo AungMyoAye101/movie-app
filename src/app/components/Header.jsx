@@ -3,20 +3,21 @@ import Darkmodeswitch from "./Darkmodeswitch";
 
 import { IoHomeSharp } from "react-icons/io5";
 import { FaInfoCircle } from "react-icons/fa";
+import Link from "next/link";
 
 export default function Header() {
   return (
-    <div className="flex justify-between px-4 py-1 items-center  mx-auto">
+    <div className="flex justify-between px-4 py-1 items-center max-w-6xl  mx-auto">
       <div className="flex items-center gap-3">
-        <div>
+        <Link href={"/"}>
           <h1 className="hidden sm:block text-xl ">Home</h1>
           <IoHomeSharp className="text-lg sm:hidden" />
-        </div>
+        </Link>
 
-        <div>
+        <Link href={"../about"}>
           <h1 className="hidden sm:block text-xl bold">About</h1>
           <FaInfoCircle className="text-lg sm:hidden" />
-        </div>
+        </Link>
       </div>
 
       <div className="flex items-center gap-3">
