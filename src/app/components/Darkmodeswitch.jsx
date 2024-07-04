@@ -18,14 +18,15 @@ export default function Darkmodeswitch() {
         (currentTheme === "dark" ? (
           <MdDarkMode
             onClick={() => {
-              setTheme("dark");
-              console.log("click");
+              setTheme("light");
             }}
             className="text-lg cursor-pointer hover:text-amber-500"
           />
         ) : (
           <CiLight
-            onClick={() => setTheme("light")}
+            onClick={() => {
+              setTheme("dark");
+            }}
             className="text-lg cursor-pointer hover:text-amber-500"
           />
         ))}
