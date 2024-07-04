@@ -1,5 +1,6 @@
 import React from "react";
 import MenuItems from "./MenuItems";
+import Darkmodeswitch from "./Darkmodeswitch";
 import { AiFillHome } from "react-icons/ai";
 import { BsFillInfoCircleFill } from "react-icons/bs";
 import { MdDarkMode } from "react-icons/md";
