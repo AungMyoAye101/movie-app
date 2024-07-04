@@ -16,14 +16,14 @@ export default function Darkmodeswitch() {
     <div>
       {mounted &&
         (currentTheme === "dark" ? (
-          <MdDarkMode
+          <CiLight
             onClick={() => {
               setTheme("light");
             }}
             className="text-lg cursor-pointer hover:text-amber-500"
           />
         ) : (
-          <CiLight
+          <MdDarkMode
             onClick={() => {
               setTheme("dark");
             }}
