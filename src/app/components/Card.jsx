@@ -12,8 +12,8 @@ const Card = ({ title, poster, overview, releaseDate, count }) => {
         className="rounded-t"
       />
       <div className="flex flex-col gap-2 p-2">
-        <h1 className="transcate">{title}</h1>
-        <div className="max-h-16 overflow-hidden text-sm">{overview}</div>
+        <h1 className="truncate">{title}</h1>
+        <div className="line-clamp-3 overflow-hidden text-sm">{overview}</div>
         <div className="flex justify-between">
           <span>{releaseDate}</span>
           <span>{count}</span>
