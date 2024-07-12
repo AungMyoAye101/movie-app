@@ -4,8 +4,9 @@ import Card from "./components/Card";
 
 const Home = async () => {
   const res = await fetch(
-    `https://api.themoviedb.org/3/movie/top_rated?api_key=${API_KEY}`
+    `https://api.themoviedb.org/3/trending/all/week?api_key=${API_KEY}`
   );
+
   const result = await res.json();
 
   return (
@@ -14,11 +15,13 @@ const Home = async () => {
         {result.results.map((item) => (
           <Card
             key={item.id}
-            title={item.title}
+            title={item.original_name ? item.original_name : item.title}
             poster={item.poster_path}
             overview={item.overview}
             count={item.vote_count}
-            releaseDate={item.release_date}
+            releaseDate={
+              item.release_date ? item.release_date : item.first_air_date
+            }
           />
         ))}
       </div>
