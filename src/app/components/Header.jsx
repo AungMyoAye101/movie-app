@@ -14,7 +14,7 @@ export default function Header() {
           <IoHomeSharp className="text-lg sm:hidden" />
         </Link>
 
-        <Link href={"../about"}>
+        <Link href={"/about"}>
           <h1 className="hidden sm:block text-xl bold">About</h1>
           <FaInfoCircle className="text-lg sm:hidden" />
         </Link>
