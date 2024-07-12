@@ -18,7 +18,7 @@ const Home = async ({ searchParams }) => {
 
   return (
     <div>
-      <Result results={results} />
+      <Result results={results.results} />
     </div>
   );
 };
