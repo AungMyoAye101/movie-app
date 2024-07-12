@@ -9,10 +9,10 @@ const Card = ({ id, title, poster, overview, releaseDate, count }) => {
         <Image
           src={`https://image.tmdb.org/t/p/original/${poster}`}
           width={500}
-          height={500}
-          layout="fixed"
+          height={300}
           alt="posters"
-          style={{ maxWidth: "100%", height: "auto", objectFit: "contain" }}
+          className="rounded-t-lg"
+          style={{ maxWidth: "100%", aspectRatio: "1/1", objectFit: "fill" }}
         />
       </Link>
       <div className="card-body">
