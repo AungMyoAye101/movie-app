@@ -16,7 +16,7 @@ const MoviePage = async ({ params }) => {
         height={300}
         alt="posters"
         className="rounded-lg"
-        style={{ maxWidth: "100%" }}
+        style={{ maxWidth: "100%",aspectRatio:'16/9' }}
       />
       <div className="px-2">
         <h1>{movie.title || movie.original_name}</h1>

@@ -11,15 +11,18 @@ const SearchBox = () => {
     router.push(`/search/${search}`);
   };
   return (
-    <form className="flex justify-between px-10" onSubmit={handelChange}>
+    <form
+      className="flex justify-between px-10 max-w-lg mx-auto "
+      onSubmit={handelChange}
+    >
       <input
         type="text"
         placeholder="Search with text..."
-        className="w-full py-2 bg-transparent outline-none rounded m-4"
+        className="w-full p-2 bg-transparent outline-none rounded m-4 border-gray-500 border"
         onChange={(e) => setsearch(e.target.value)}
       />
       <button
-        className="text-amber-500 disabled:text-gray-300"
+        className="text-amber-500 disabled:text-gray-300 "
         disabled={search === ""}
       >
         Enter
