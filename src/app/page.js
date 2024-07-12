@@ -14,6 +14,7 @@ const Home = async ({ searchParams }) => {
   );
 
   const result = await res.json();
+
   return (
     <div>
       <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">

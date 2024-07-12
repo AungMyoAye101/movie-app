@@ -11,7 +11,7 @@ const Card = ({ id, title, poster, overview, releaseDate, count }) => {
           width={400}
           height={300}
           alt="posters"
-          className="rounded-t"
+          className="rounded"
         />
       </Link>
       <div className="flex flex-col gap-2 p-2">
