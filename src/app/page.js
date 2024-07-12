@@ -2,6 +2,7 @@ const API_KEY = process.env.API_KEY;
 import React from "react";
 import Card from "./components/Card";
 import { revalidatePath } from "next/cache";
+import Result from "./components/Result";
 
 const Home = async ({ searchParams }) => {
   const genre = searchParams.genre || "fetchTrending";
@@ -13,25 +14,11 @@ const Home = async ({ searchParams }) => {
     { next: { revalidate: 10000 } }
   );
 
-  const result = await res.json();
+  const results = await res.json();
 
   return (
     <div>
-      <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-        {result.results.map((item) => (
-          <Card
-            key={item.id}
-            id={item.id}
-            title={item.original_name ? item.original_name : item.title}
-            poster={item.poster_path ? item.poster_path : item.backdrop_path}
-            overview={item.overview}
-            count={item.vote_count}
-            releaseDate={
-              item.release_date ? item.release_date : item.first_air_date
-            }
-          />
-        ))}
-      </div>
+      <Result results={results} />
     </div>
   );
 };
