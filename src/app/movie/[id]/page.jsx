@@ -6,17 +6,30 @@ const MoviePage = async ({ params }) => {
     `https://api.themoviedb.org/3/movie/${movieId}
     ?api_key=${process.env.API_key}`
   );
-  const result = await res.json();
+  const movie = await res.json();
 
   return (
-    <div>
+    <div className="w-full flex flex-col gap-2 md:flex-row  justify-between items-center px-2">
       <Image
-        src={`https://image.tmdb.org/t/p/original/${result.poster_path}`}
-        width={400}
+        src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`}
+        width={500}
         height={300}
         alt="posters"
-        className="rounded"
+        className="rounded-lg"
+        style={{ maxWidth: "100%" }}
       />
+      <div className="px-2">
+        <h1>{movie.title || movie.original_name}</h1>
+        <p>{movie.overview}</p>
+        <p>
+          <span>Released date :</span>
+          {movie.release_date || movie.first_air_date}
+        </p>
+        <p>
+          <span>Rating :</span>
+          {movie.vote_count}
+        </p>
+      </div>
     </div>
   );
 };
