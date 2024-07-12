@@ -7,7 +7,7 @@ const Home = async ({ searchParams }) => {
   const res = await fetch(
     `https://api.themoviedb.org/3${
       genre === "fetchTopRated" ? "/movie/top_rated" : "/trending/all/week"
-    }?api_key=${API_KEY}`
+    }?api_key=${API_KEY}h`
   );
 
   const result = await res.json();

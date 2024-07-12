@@ -4,17 +4,13 @@ import { useSearchParams } from "next/navigation";
 import React from "react";
 
 export default function NavBarItem({ title, param }) {
-  const searchParam = useSearchParams();
-  const genre = searchParam.get("genre");
+  const searchParams = useSearchParams();
+  const genre = searchParams.get("genre");
+
   return (
     <div>
       <Link
-        className={`hover:text-amber-500 
-            ${
-              genre === param
-                ? "underline underline-offset-8 decoration-4 decoration-amber-500 rounded-lg"
-                : ""
-            }`}
+        className={`hover:text-amber-500 text-lg `}
         href={`/?genre=${param}`}
       >
         {title}
