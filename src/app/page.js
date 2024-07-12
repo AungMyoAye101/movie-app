@@ -16,7 +16,7 @@ const Home = async () => {
           <Card
             key={item.id}
             title={item.original_name ? item.original_name : item.title}
-            poster={item.poster_path}
+            poster={item.poster_path ? item.poster_path : item.backdrop_path}
             overview={item.overview}
             count={item.vote_count}
             releaseDate={
