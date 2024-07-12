@@ -2,9 +2,12 @@ const API_KEY = process.env.API_KEY;
 import React from "react";
 import Card from "./components/Card";
 
-const Home = async () => {
+const Home = async ({ searchParams }) => {
+  const genre = searchParams.genre || "fetchTrending";
   const res = await fetch(
-    `https://api.themoviedb.org/3/trending/all/week?api_key=${API_KEY}`
+    `https://api.themoviedb.org/3${
+      genre === "fetchTopRated" ? "/movie/top_rated" : "/trending/all/week"
+    }?api_key=${API_KEY}`
   );
 
   const result = await res.json();
