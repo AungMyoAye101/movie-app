@@ -4,7 +4,7 @@ import Card from "./Card";
 const Result = ({ results }) => {
   return (
     <div>
-      <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+      <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 max-w-6xl mx-auto">
         {results.map((item) => (
           <Card
             key={item.id}
