@@ -1,17 +1,19 @@
 const API_KEY = process.env.API_KEY;
 import React from "react";
 import Card from "./components/Card";
+import { revalidatePath } from "next/cache";
 
 const Home = async ({ searchParams }) => {
   const genre = searchParams.genre || "fetchTrending";
+
   const res = await fetch(
     `https://api.themoviedb.org/3${
       genre === "fetchTopRated" ? "/movie/top_rated" : "/trending/all/week"
-    }?api_key=${API_KEY}h`
+    }?api_key=${API_KEY}`,
+    { next: { revalidate: 10000 } }
   );
 
   const result = await res.json();
-
   return (
     <div>
       <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
