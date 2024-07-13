@@ -22,14 +22,14 @@ export default function Darkmodeswitch() {
             onClick={() => {
               setTheme("light");
             }}
-            className="text-lg cursor-pointer hover:text-amber-500"
+            className="text-lg cursor-pointer hover:text-amber-500 transition-transform transiion-300"
           />
         ) : (
           <MdDarkMode
             onClick={() => {
               setTheme("dark");
             }}
-            className="text-lg cursor-pointer hover:text-amber-500"
+            className="text-lg cursor-pointer hover:text-amber-500 transition-transform transiion-300"
           />
         ))}
     </label>

@@ -5,7 +5,7 @@ export default function Provider({ children }) {
   return (
     <ThemeProvider defaultTheme="system" attribute="class">
       <div
-        className="text-gray-700 dark:text-gray-200 dark:bg-gray-700 min-h-screen select-none
+        className="text-gray-800 bg-gray-200 dark:text-gray-200 dark:bg-gray-700 min-h-screen select-none
       transition-color duration-300"
       >
         {children}

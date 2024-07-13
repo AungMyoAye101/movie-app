@@ -14,13 +14,13 @@ const SearchBox = () => {
     <form className="flex  max-w-lg mx-auto p-2 gap-1" onSubmit={handelChange}>
       <input
         type="text"
-        className="input input-bordered w-full flex-1 "
+        className="input input-bordered w-full flex-1 bg-transparent border-gray-500"
         placeholder="Search"
         onChange={(e) => setsearch(e.target.value)}
       />
 
       <button
-        className="btn btn-ghost disabled:text-gray-300 "
+        className="btn btn-ghost disabled:text-gray-300 bg-transparent"
         disabled={search === ""}
       >
         Enter
