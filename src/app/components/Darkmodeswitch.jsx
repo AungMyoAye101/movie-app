@@ -13,7 +13,9 @@ export default function Darkmodeswitch() {
   }, []);
 
   return (
-    <div>
+    <label className="swap swap-rotate">
+      {/* sun icon */}
+
       {mounted &&
         (currentTheme === "dark" ? (
           <CiLight
@@ -30,6 +32,6 @@ export default function Darkmodeswitch() {
             className="text-lg cursor-pointer hover:text-amber-500"
           />
         ))}
-    </div>
+    </label>
   );
 }
