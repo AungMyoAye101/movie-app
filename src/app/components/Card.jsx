@@ -12,7 +12,7 @@ const Card = ({ id, title, poster, overview, releaseDate, count }) => {
           height={300}
           alt="posters"
           className="rounded-t-lg"
-          style={{ maxWidth: "100%", aspectRatio: "1/1", objectFit: "fill" }}
+          style={{ maxWidth: "100%", aspectRatio: "2/3", objectFit: "fill" }}
         />
       </Link>
       <div className="card-body px-2">

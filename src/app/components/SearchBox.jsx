@@ -19,10 +19,7 @@ const SearchBox = () => {
         onChange={(e) => setsearch(e.target.value)}
       />
 
-      <button
-        className="btn btn-ghost disabled:text-gray-300 bg-transparent"
-        disabled={search === ""}
-      >
+      <button className="btn btn-ghost text-gray-900  dark:text-gray-100 ">
         Enter
       </button>
     </form>

@@ -11,7 +11,7 @@ const Home = async ({ searchParams }) => {
     `https://api.themoviedb.org/3${
       genre === "fetchTopRated" ? "/movie/top_rated" : "/trending/all/week"
     }?api_key=${API_KEY}`,
-    { next: { revalidate: 10000 } }
+    { next: { revalidate: 100 } }
   );
 
   const results = await res.json();
