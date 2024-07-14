@@ -12,6 +12,7 @@ const Result = ({ results }) => {
             title={item.original_name ? item.original_name : item.title}
             poster={item.poster_path ? item.poster_path : item.backdrop_path}
             overview={item.overview}
+            mediaType={item.media_type}
             count={item.vote_count}
             releaseDate={
               item.release_date ? item.release_date : item.first_air_date

@@ -2,10 +2,18 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-const Card = ({ id, title, poster, overview, releaseDate, count }) => {
+const Card = ({
+  id,
+  title,
+  mediaType,
+  poster,
+  overview,
+  releaseDate,
+  count,
+}) => {
   return (
     <div className=" card  ">
-      <Link href={`/movie/${id}`}>
+      <Link href={`/${mediaType || "movie"}/${id}`}>
         <Image
           src={`https://image.tmdb.org/t/p/original/${poster}`}
           width={500}
